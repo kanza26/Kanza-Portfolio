@@ -44,4 +44,4 @@ jobs:
     # 6. Invalidate CloudFront Cache (Tells AWS to stop showing old files)
     - name: Invalidate CloudFront Cache
       run: |
-        aws cloudfront create-invalidation --distribution-id d32rk42wstdr21.cloudfront.net --paths "/*"
+        aws cloudfront create-invalidation --distribution-id E10E3GQLFYSD7U --paths "/*"
