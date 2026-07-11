@@ -5,7 +5,7 @@ const experiences = [
   {
     type: 'internship',
     title: 'Software Engineer Intern',
-    company: 'Teresl Private Limited',
+    company: 'Teresol Private Limited',
     period: 'December 2024 – January 2025',
     desc: 'Built an interactive, real-time dashboard with Streamlit to visualize key NASDAQ market trends. Additionally, debugged and refactored a banking audit application by implementing strategic database indexing and optimizing image assets, resulting in a 20% performance uplift.'
   },

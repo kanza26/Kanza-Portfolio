@@ -39,7 +39,7 @@ jobs:
     # 5. Sync the 'dist' folder directly to your S3 Bucket
     - name: Deploy to S3
       run: |
-        aws s3 sync dist/ s3://kanza-portfolio-vite-site --delete
+        aws s3 sync dist/ s3://kanzafat.portfolio.com --delete
 
     # 6. Invalidate CloudFront Cache (Tells AWS to stop showing old files)
     - name: Invalidate CloudFront Cache
