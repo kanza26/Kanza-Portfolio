@@ -1,0 +1,44 @@
+
+.achievements-heading{
+  color: #e60b0b;
+
+}
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.achievement-card {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 6px 25px rgba(108, 99, 255, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(108, 99, 255, 0.05);
+}
+
+.achievement-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(108, 99, 255, 0.15);
+  border-color: #f04c4c;
+}
+
+.achievement-card .icon {
+  font-size: 3rem;
+  color: #f04c4c;
+  margin-bottom: 1rem;
+}
+
+.achievement-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #2d2d2d;
+}
+
+.achievement-card p {
+  color: #666;
+  font-size: 0.95rem;
+}

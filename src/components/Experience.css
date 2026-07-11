@@ -1,0 +1,157 @@
+/* ---------- Main Container ---------- */
+.experience-heading{
+    color:#e01616;
+}
+.contact-link{
+    cursor: pointer;
+}
+.experience-timeline {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ---------- Card Wrapper ---------- */
+.exp-item {
+  position: relative;
+  width: 85%;
+  max-width: 700px;
+  
+  /* 👇 HARD FORCED: NO TILT, NO ROTATION */
+  transform: rotate(0deg) !important;
+  
+  /* Continuous floating */
+  animation: floatCard 3s ease-in-out infinite;
+}
+
+/* Staggered delays for wave effect */
+.exp-item:nth-child(1) { animation-delay: 0s; }
+.exp-item:nth-child(2) { animation-delay: 0.4s; }
+.exp-item:nth-child(3) { animation-delay: 0.8s; }
+.exp-item:nth-child(4) { animation-delay: 1.2s; }
+
+/* ---------- Floating Keyframes (Strictly up and down) ---------- */
+@keyframes floatCard {
+  0%   { transform: translateY(0px) rotate(0deg); }
+  50%  { transform: translateY(-10px) rotate(0deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* ---------- Card Inner Content (Straight as a ruler) ---------- */
+.exp-content {
+  background: #ffffff;
+  padding: 1.8rem 2rem;
+  border-radius: 16px;
+  
+  /* 👇 Symmetrical shadow (no left/right bias) */
+  box-shadow: 0 4px 20px rgba(108, 99, 255, 0.08);
+  border: 1px solid rgba(108, 99, 255, 0.06);
+  
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  
+  /* 👇 FORCED STRAIGHT */
+  transform: rotate(0deg) !important;
+}
+
+/* ---------- Badge (Now placed INSIDE nicely, no sticking out) ---------- */
+.exp-badge {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 6px 16px;
+  border-radius: 50px;
+  background: #6C63FF;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  
+  /* 👇 Forces the badge text to be straight */
+  transform: rotate(0deg) !important;
+}
+
+/* Internship vs Project badge colors */
+.exp-item.internship .exp-badge {
+  background: #6C63FF;
+}
+.exp-item.project .exp-badge {
+  background: #ffb347;
+}
+
+/* ---------- Text Styling ---------- */
+.exp-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.2rem;
+  color: #1f1f2e;
+}
+
+.exp-content h4 {
+  color: #6C63FF;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.exp-period {
+  display: inline-block;
+  background: #f0edff;
+  padding: 0.2rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #6C63FF;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.exp-content p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* ---------- Left border removed (to avoid illusion of tilt) ---------- */
+/* We use a top border instead to keep it perfectly horizontal */
+.exp-item.internship .exp-content {
+  border-top: 4px solid #6C63FF;
+}
+
+.exp-item.project .exp-content {
+  border-top: 4px solid #ffb347;
+}
+
+/* ---------- Hover Effect (No tilt, just scale) ---------- */
+.exp-item:hover .exp-content {
+  box-shadow: 0 8px 30px rgba(108, 99, 255, 0.15);
+  transform: scale(1.02) rotate(0deg) !important;
+}
+
+.exp-item:hover {
+  animation-play-state: paused;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .exp-item {
+    width: 95%;
+  }
+  .exp-content {
+    padding: 1.5rem;
+  }
+  .exp-content h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .exp-content {
+    padding: 1rem 1.2rem;
+  }
+  .exp-badge {
+    font-size: 0.7rem;
+    padding: 4px 12px;
+  }
+}

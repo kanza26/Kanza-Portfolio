@@ -1,0 +1,41 @@
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 80px 0;
+  border-bottom: 1px solid rgba(108, 99, 255, 0.1);
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #e60b0b;
+  text-align: center;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #e60b0b;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 50px 0;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
