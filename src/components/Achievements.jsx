@@ -5,7 +5,7 @@ import './Achievments.css';
 const achievementsData = [
   { icon: <FaTrophy />, title: 'RUNNER UP FYDP', desc: 'FYDP won runner up place at FYDP EXPO 2026 among 29 competing projects' },
   { icon: <FaAward />, title: 'FYDP INCUBATED', desc: 'FYDP idea incubated in NIC COHORT 15' },
-  { icon: <FaStar />, title: 'SCHOLARSHIP RECEPIENT', desc: 'SEEF Scholarship 2025 Recepient ' },
+  { icon: <FaStar />, title: 'SCHOLARSHIP RECIPIENT', desc: 'SEEF Scholarship 2025 Recepient ' },
 ];
 
 const Achievements = () => {

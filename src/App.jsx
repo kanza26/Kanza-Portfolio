@@ -7,7 +7,10 @@ import Experience from './components/Experience';
 import SocialHandles from './components/SocialHandles';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
-
+import Certifications from './components/Certifications';
+import Volunteer from './components/Volunteer';
+import Blog from './components/Blog';
+import Education from './components/Education';
 function App() {
   return (
     <>
@@ -17,6 +20,10 @@ function App() {
         <Intro />
         <Achievements />
         <Experience />
+        <Certifications/>
+        <Volunteer/>
+        <Blog/>
+        <Education/>
         <SocialHandles />
         <ContactForm />
       </div>

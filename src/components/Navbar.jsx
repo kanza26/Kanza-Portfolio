@@ -5,7 +5,7 @@ import './Navbar.css';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [isOpen, setIsOpen] = useState(false); // 👈 Hamburger toggle state
+  const [isOpen, setIsOpen] = useState(false); // Hamburger toggle state
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,8 +45,10 @@ const Navbar = () => {
         <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
           <li><Link to="intro" smooth duration={500} onClick={handleLinkClick}>Home</Link></li>
           <li><Link to="achievements" smooth duration={500} onClick={handleLinkClick}>Achievements</Link></li>
+          <li><Link to="certifications" smooth duration={500} onClick={handleLinkClick}>Certifications</Link></li> {/* 👈 ADDED */}
+          <li><Link to="volunteer" smooth duration={500} onClick={handleLinkClick}>Volunteer Participation</Link></li> {/* 👈 ADDED */}
           <li><Link to="experience" smooth duration={500} onClick={handleLinkClick}>Experience</Link></li>
-          <li><Link to="social" smooth duration={500} onClick={handleLinkClick}>Connect</Link></li>
+          <li><Link to="education" smooth duration={500} onClick={handleLinkClick}>Education</Link></li>
           <li><Link to="contact" smooth duration={500} onClick={handleLinkClick}>Contact</Link></li>
         </ul>
       </div>
